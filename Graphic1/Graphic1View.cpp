@@ -134,10 +134,6 @@ void CGraphic1View::OnDraw(CDC* pDC)
 		pDC->LineTo(rcClient.CenterPoint().x + (int)(x*scalex), rcClient.CenterPoint().y -
 			(int)(y*scaley));
 	}
-	// установим имя собственной функции в правом верхнем углу
-	//pDC->SetTextColor(RGB(255, 0, 0));
-	//pDC->SetTextAlign(TA_TOP + TA_RIGHT);
-	//pDC -> TextOut(rcClient.Width() - 1, 0, " y = funtie(x, e)");
 	// рисуем стандартную функцию sin(x)/x
 	step = 0.025;
 	for (x = a; x <= b; x += step)
@@ -146,10 +142,6 @@ void CGraphic1View::OnDraw(CDC* pDC)
 		pDC->SetPixel(rcClient.CenterPoint().x + (int)(x*scalex) + 1, rcClient.CenterPoint().y -
 			(int)(y*scaley) + 1, RGB(0, 255, 0));
 	}
-	// установим в правом нижнем углу название стандартной функции
-//	pDC->SetTextColor(RGB(0, 255, 0));
-	//pDC->SetTextAlign(TA_BOTTOM + TA_RIGHT);
-	//pDC->TextOut(rcClient.Width() - 1, rcClient.Height() - 1, " y = sin(x) / x");
 
 	fclose(file1);
 	fclose(file2);
